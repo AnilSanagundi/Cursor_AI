@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background: #f65d1b;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: rgb(10, 12, 12);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Hero section */
+        .hero {
+            padding: 6rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects grid */
+        .projects {
+            padding: 2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .project-card {
+            border: 1px solid #bd0e0e;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Contact form */
+        .contact {
+            padding: 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #07b3a4;
+        }
+
+        button {
+            background: #f71111;
+            color: rgb(255, 255, 255);
+            padding: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Media queries */
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="download.jpeg" alt="Profile" class="profile-img">
+        <h1>Anil S</h1>
+        <p>Web Developer</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images.jpeg" alt="Smart Wallet Project" class="project-image">
+                <h3>Smart Wallet in blockchain</h3>
+                <p>Developed a decentralized smart wallet application using Solidity and Web3.js that enables secure cryptocurrency transactions and multi-signature functionality on the Ethereum blockchain</p>
+            </div>
+            <div class="project-card">
+                <img src="speech.jpeg" alt="Speech Emotion Recognition" class="project-image">
+                <h3>Speech Emotion Recognition</h3>
+                <p>Developed a deep learning model using TensorFlow and Librosa to recognize human emotions from speech signals with high accuracy</p>
+            </div>
+            <div class="project-card">
+                <img src="heritage.jpeg" alt="Heritage Hub" class="project-image">
+                <h3>Heritage Hub</h3>
+                <p>A digital platform for preserving and sharing cultural heritage, featuring interactive timelines, artifact galleries, and community storytelling features</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
